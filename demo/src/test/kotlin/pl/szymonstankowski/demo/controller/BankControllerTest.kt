@@ -111,7 +111,7 @@ internal class BankControllerTest @Autowired constructor(
         @Test
         fun `should return BAD REQUEST if bank with given account number already exists`() {
             //given
-            val invalidBank = Bank("acc1234", 54.55, 23)
+            val invalidBank = Bank("12345", 5.12, 19)
 
             //when
             val performPost = mockMvc.post(baseUrl) {
