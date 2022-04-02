@@ -6,7 +6,9 @@ import pl.szymonstankowski.demo.demoapi.model.Bank
 
 @Service
 class BankService(private val dataSource: BankDataSource) {
-    fun getBanks(): Collection<Bank> {
-        return dataSource.retrieveBanks()
-    }
+
+    fun getBanks(): Collection<Bank> = dataSource.retrieveBanks()
+    fun getBank(accountNumber: String): Bank = dataSource.retrieveBank(accountNumber)
+
+
 }
